@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Third INFOGUT Training School 2026</title>
+<style>
+  :root {
+    --red: #a91900;
+    --red-dark: #7d1200;
+    --ink: #111111;
+    --muted: #5a5a5a;
+    --line: #e2e2e2;
+    --panel: #faf6f5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #ffffff;
+    color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 820px; margin: 0 auto; padding: 0 20px; }
+  a { color: var(--red); }
+  :focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+
+  header { padding: 44px 0 34px; border-bottom: 3px solid var(--red); }
+  header img { max-width: 230px; height: auto; display: block; margin-bottom: 22px; }
+  h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 10px; }
+  h1 span { color: var(--red); }
+  .meta { margin: 0; color: var(--muted); font-size: 1.05rem; }
+  .meta strong { color: var(--ink); }
+
+  nav { border-bottom: 1px solid var(--line); position: sticky; top: 0; background: #fff; z-index: 5; }
+  nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 22px; margin: 0; padding: 13px 0; }
+  nav a { color: var(--muted); text-decoration: none; font-size: 14px; }
+  nav a:hover, nav a:focus { color: var(--red); }
+
+  section { padding: 42px 0; border-bottom: 1px solid var(--line); }
+  h2 {
+    font-size: 1.3rem; margin: 0 0 18px; padding-bottom: 8px;
+    border-bottom: 2px solid var(--red); display: inline-block;
+  }
+  h3 { font-size: 1rem; margin: 26px 0 6px; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 5px; }
+
+  .panel { background: var(--panel); border-left: 4px solid var(--red); padding: 16px 20px; margin: 22px 0; }
+  .panel p:first-child { margin-top: 0; }
+  .panel p:last-child { margin-bottom: 0; }
+  .todo { background: #fff8e6; border-left: 4px solid #d19b00; padding: 14px 18px; margin: 20px 0; font-size: 15px; }
+
+  .btn { display: inline-block; background: var(--red); color: #fff; padding: 12px 24px;
+         text-decoration: none; font-weight: 600; }
+  .btn:hover, .btn:focus { background: var(--red-dark); }
+
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 26px; }
+  th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); vertical-align: top; font-size: 15px; }
+  thead th { background: var(--ink); color: #fff; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; border: none; }
+  td.time { white-space: nowrap; color: var(--muted); font-variant-numeric: tabular-nums; width: 120px; }
+  tr.break td { background: #fafafa; color: var(--muted); font-style: italic; }
+  .facts th { color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: .05em; width: 190px; }
+
+  .trainer { padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .trainer:last-child { border-bottom: none; }
+  .trainer .affil { color: var(--muted); font-size: 14px; }
+
+  footer { padding: 30px 0 60px; color: var(--muted); font-size: 14px; }
+  @media (max-width: 560px) { h1 { font-size: 1.6rem; } td.time { width: auto; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <img src="infogut-logo.jpg" alt="INFOGUT">
+    <h1>Third <span>INFOGUT</span> Training School</h1>
+    <p class="meta"><strong>28&ndash;30 September 2026</strong> &middot; IMDEA Nutrition Institute, Madrid, Spain &middot; In person</p>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <ul>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#apply">Eligibility &amp; applying</a></li>
+      <li><a href="#trainers">Trainers</a></li>
+      <li><a href="#programme">Programme</a></li>
+      <li><a href="#venue">Venue &amp; travel</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ================= OVERVIEW ================= -->
+<section id="overview">
+  <div class="wrap">
+    <h2>Bioinformatics 101 for colon model experiments</h2>
+    <p>A three-day, hands-on introduction to the computational skills needed to analyse data from
+       colon model experiments. The school is designed for complete beginners: no prior bioinformatics
+       experience is required.</p>
+
+    <h3>What the course covers</h3>
+    <ul>
+      <li>Introduction to the command line and bash/Unix</li>
+      <li>Introduction to R</li>
+      <li>Statistical analysis for colon model experiments</li>
+      <li>Overview of the data produced in colon models &mdash; microbiome and metabolome</li>
+      <li>Introduction to code management with GitHub</li>
+      <li>Workflows, environments, and FAIR data management</li>
+    </ul>
+
+    <h3>Who it is for</h3>
+    <ul>
+      <li>Bioinformatics beginners with little or no prior experience</li>
+      <li>30 places available</li>
+    </ul>
+
+    <h3>What to bring</h3>
+    <div class="todo">
+      <strong>To confirm:</strong> laptop specification, software to install before arrival,
+      and any pre-course reading or setup instructions.
+    </div>
+  </div>
+</section>
+
+<!-- ================= APPLY ================= -->
+<section id="apply">
+  <div class="wrap">
+    <h2>Eligibility and how to apply</h2>
+
+    <h3>Eligibility</h3>
+    <ul>
+      <li>Open to everyone, but Early Career Researchers will be prioritised.</li>
+      <li>Participants who registered for the Second INFOGUT Training School in Clermont-Ferrand (2026) are <strong>not</strong> eligible for this school.</li>
+      <li>Registration with the INFOGUT COST Action is required &mdash; register at
+          <a href="https://infogut.eu/">infogut.eu</a>.</li>
+      <li>Travel and daily allowance costs are covered by the INFOGUT COST Action. Only participants
+          from COST countries are eligible for this reimbursement.</li>
+    </ul>
+
+    <h3>Key dates</h3>
+    <table class="facts">
+      <tr><th>Applications open</th><td>[[DATE &mdash; to confirm]]</td></tr>
+      <tr><th>Application deadline</th><td>[[DATE &mdash; to confirm]]</td></tr>
+      <tr><th>Decisions announced</th><td>[[DATE &mdash; to confirm]]</td></tr>
+      <tr><th>Training school</th><td>28&ndash;30 September 2026</td></tr>
+    </table>
+
+    <div class="panel">
+      <p>Applications are made through an online form.</p>
+      <p><a class="btn" href="[[GOOGLE FORM URL]]">Apply now</a></p>
+    </div>
+
+    <div class="todo">
+      <strong>To confirm:</strong> what applicants need to submit (CV, motivation statement, supervisor
+      support?) and the criteria used to select between applicants beyond ECR priority.
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRAINERS ================= -->
+<section id="trainers">
+  <div class="wrap">
+    <h2>Trainers</h2>
+
+    <div class="trainer">
+      <strong>Enrique Carrillo</strong><br>
+      <span class="affil">IMDEA, Madrid, Spain</span>
+    </div>
+    <div class="trainer">
+      <strong>Laura Judith Marcos Zambrano</strong><br>
+      <span class="affil">IMDEA, Madrid, Spain</span>
+    </div>
+    <div class="trainer">
+      <strong>Alise Ponsero</strong><br>
+      <span class="affil">Quadram Institute Bioscience, United Kingdom</span>
+    </div>
+    <div class="trainer">
+      <strong>Eliana Ibrahimi</strong><br>
+      <span class="affil">University of Tirana, Albania</span>
+    </div>
+    <div class="trainer">
+      <strong>Anna Mascellani Bergo</strong><br>
+      <span class="affil"><a href="https://www.czu.cz/en">Czech University of Life Sciences</a>, Czech Republic</span>
+    </div>
+    <div class="trainer">
+      <strong><a href="https://www.linkedin.com/in/petra-polakovicova/">Petra Polakovi&ccaron;ov&aacute;</a></strong><br>
+      <span class="affil">Institut klinick&eacute; a experiment&aacute;ln&iacute; medic&iacute;ny, Czech Republic</span>
+    </div>
+
+    <p class="affil" style="margin-top:18px">Further trainers and session assignments to be announced.</p>
+  </div>
+</section>
+
+<!-- ================= PROGRAMME ================= -->
+<section id="programme">
+  <div class="wrap">
+    <h2>Programme</h2>
+
+    <h3>Monday 28 September</h3>
+    <table>
+      <thead><tr><th>Time</th><th>Session</th></tr></thead>
+      <tbody>
+        <tr><td class="time">09:30 &ndash; 10:00</td><td>Welcome and the data journey &mdash; what data a colon model experiment produces; overview of the three days</td></tr>
+        <tr><td class="time">10:00 &ndash; 10:45</td><td>Experimental design for colon models &mdash; replication, donor and vessel effects, controls, confounders, longitudinal sampling</td></tr>
+        <tr><td class="time">10:45 &ndash; 11:20</td><td>CLI and bash, part 1 &mdash; navigation, files, wildcards</td></tr>
+        <tr class="break"><td class="time">11:20 &ndash; 11:40</td><td>Coffee</td></tr>
+        <tr><td class="time">11:40 &ndash; 13:00</td><td>CLI and bash, part 2 &mdash; pipes, grep</td></tr>
+        <tr class="break"><td class="time">13:00 &ndash; 14:30</td><td>Lunch</td></tr>
+        <tr><td class="time">14:30 &ndash; 15:15</td><td>Core statistics for data analysis &mdash; testing, multiple comparisons, effect size vs significance, power</td></tr>
+        <tr><td class="time">15:15 &ndash; 16:00</td><td>CLI and bash, part 3 &mdash; loops, writing and running a small script</td></tr>
+        <tr class="break"><td class="time">16:00 &ndash; 16:20</td><td>Coffee</td></tr>
+        <tr><td class="time">16:20 &ndash; 17:30</td><td>Introduction to metabolomics concepts &mdash; targeted vs untargeted; what the data looks like</td></tr>
+        <tr class="break"><td class="time">17:30 &ndash; 19:30</td><td>Poster session and cocktail</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Tuesday 29 September</h3>
+    <table>
+      <thead><tr><th>Time</th><th>Session</th></tr></thead>
+      <tbody>
+        <tr><td class="time">09:30 &ndash; 09:45</td><td>Introduction to R &mdash; why R, RStudio tour, projects</td></tr>
+        <tr><td class="time">09:45 &ndash; 11:00</td><td>Hands-on R &mdash; vectors, data frames, reading data in</td></tr>
+        <tr class="break"><td class="time">11:00 &ndash; 11:20</td><td>Coffee</td></tr>
+        <tr><td class="time">11:20 &ndash; 13:00</td><td>Hands-on R &mdash; dplyr verbs, tidy data, ggplot2 visualisation</td></tr>
+        <tr class="break"><td class="time">13:00 &ndash; 14:30</td><td>Lunch</td></tr>
+        <tr><td class="time">14:30 &ndash; 15:15</td><td>Hands-on R &mdash; data analysis: testing, multiple comparisons</td></tr>
+        <tr><td class="time">15:15 &ndash; 16:00</td><td>Hands-on R &mdash; data analysis: using data objects</td></tr>
+        <tr class="break"><td class="time">16:00 &ndash; 16:20</td><td>Coffee</td></tr>
+        <tr><td class="time">16:20 &ndash; 17:30</td><td>Data management and FAIR &mdash; project structure, metadata, repositories, plus short hands-on setup, then close</td></tr>
+        <tr class="break"><td class="time">20:00</td><td>Dinner</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Wednesday 30 September</h3>
+    <table>
+      <thead><tr><th>Time</th><th>Session</th></tr></thead>
+      <tbody>
+        <tr><td class="time">09:30 &ndash; 11:00</td><td>GitHub</td></tr>
+        <tr class="break"><td class="time">11:00 &ndash; 11:20</td><td>Coffee</td></tr>
+        <tr><td class="time">11:20 &ndash; 12:20</td><td>Environments and workflows &mdash; Conda, Nextflow</td></tr>
+        <tr><td class="time">12:20 &ndash; 13:00</td><td>Introduction to microbiome data for colon model experiments &mdash; 16S vs WGS, what the data looks like</td></tr>
+        <tr><td class="time">13:00 &ndash; 13:30</td><td>Wrap-up and farewell</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ================= VENUE ================= -->
+<section id="venue">
+  <div class="wrap">
+    <h2>Venue and travel</h2>
+
+    <h3>Host institution</h3>
+    <p><a href="https://nutrition.imdea.org/">IMDEA Nutrition Institute</a><br>
+       Madrid, Spain</p>
+
+    <div class="todo">
+      <strong>To confirm:</strong> full street address and room, directions from the airport and from
+      central Madrid, local public transport, and site access requirements on arrival.
+    </div>
+
+    <h3>Accommodation</h3>
+    <p>Accommodation details will be published here closer to the event.</p>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p>For any questions about the training school, email
+       <a href="mailto:infogutbioinfo@gmail.com">infogutbioinfo@gmail.com</a>.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Organised by the INFOGUT COST Action &mdash; <a href="https://infogut.eu/">infogut.eu</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
