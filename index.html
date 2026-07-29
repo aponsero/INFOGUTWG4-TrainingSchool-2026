@@ -49,6 +49,10 @@
   .panel p:first-child { margin-top: 0; }
   .panel p:last-child { margin-bottom: 0; }
   .todo { background: #fff8e6; border-left: 4px solid #d19b00; padding: 14px 18px; margin: 20px 0; font-size: 15px; }
+  .no { color: var(--red); font-weight: 700; }
+  ol.steps { padding-left: 22px; }
+  ol.steps > li { margin-bottom: 16px; }
+  ol.steps > li > strong { display: block; margin-bottom: 3px; }
 
   .btn { display: inline-block; background: var(--red); color: #fff; padding: 12px 24px;
          text-decoration: none; font-weight: 600; }
@@ -83,7 +87,7 @@
   <div class="wrap">
     <ul>
       <li><a href="#overview">Overview</a></li>
-      <li><a href="#apply">Eligibility &amp; applying</a></li>
+      <li><a href="#apply">Eligibility &amp; registration</a></li>
       <li><a href="#trainers">Trainers</a></li>
       <li><a href="#programme">Programme</a></li>
       <li><a href="#venue">Venue &amp; travel</a></li>
@@ -111,50 +115,67 @@
     </ul>
 
     <h3>Who it is for</h3>
+    <p>The school is aimed at Early Career Researchers &mdash; PhD students and postdocs &mdash; but is
+       open to all, and technical personnel are particularly welcome. It focuses on people who are
+       already working with in-vitro colon models, or who are planning to.</p>
     <ul>
-      <li>Bioinformatics beginners with little or no prior experience</li>
-      <li>30 places available</li>
+      <li><strong>No prior experience is needed.</strong> The course starts from the very beginning.</li>
+      <li>If the command line and coding make you nervous, this school is designed for you. Participants
+          who feel apprehensive about code are especially encouraged to apply.</li>
+      <li>30 places available.</li>
     </ul>
 
     <h3>What to bring</h3>
-    <div class="todo">
-      <strong>To confirm:</strong> laptop specification, software to install before arrival,
-      and any pre-course reading or setup instructions.
-    </div>
+    <ul>
+      <li>Your own laptop &mdash; no machines are provided.</li>
+      <li>The ability to install software on it. You will need RStudio and a number of bioinformatics
+          packages, so you must have administrator rights, or have your IT department install them
+          beforehand. Installation instructions will be sent to participants ahead of the school.</li>
+      <li>At least 8 GB of RAM &mdash; 16 GB recommended.</li>
+    </ul>
   </div>
 </section>
 
 <!-- ================= APPLY ================= -->
 <section id="apply">
   <div class="wrap">
-    <h2>Eligibility and how to apply</h2>
+    <h2>Eligibility and how to register</h2>
 
-    <h3>Eligibility</h3>
+    <h3>Eligibility criteria</h3>
     <ul>
       <li>Open to everyone, but Early Career Researchers will be prioritised.</li>
-      <li>Participants who registered for the Second INFOGUT Training School in Clermont-Ferrand (2026) are <strong>not</strong> eligible for this school.</li>
-      <li>Registration with the INFOGUT COST Action is required &mdash; register at
-          <a href="https://infogut.eu/">infogut.eu</a>.</li>
+      <li>Participants who registered for the Second INFOGUT Training School in Clermont-Ferrand (2026)
+          are <span class="no">not</span> eligible for this school.</li>
       <li>Travel and daily allowance costs are covered by the INFOGUT COST Action. Only participants
           from COST countries are eligible for this reimbursement.</li>
     </ul>
 
     <h3>Key dates</h3>
     <table class="facts">
-      <tr><th>Applications open</th><td>Monday 3 August 2026</td></tr>
-      <tr><th>Application deadline</th><td>Tuesday 1 September 2026</td></tr>
-      <tr><th>Decisions announced</th><td>Tuesday 8 September 2026</td></tr>
+      <tr><th>Registration opens</th><td>Monday 3 August 2026</td></tr>
+      <tr><th>Registration closes</th><td>Tuesday 1 September 2026</td></tr>
+      <tr><th>Confirmations sent</th><td>Tuesday 8 September 2026</td></tr>
       <tr><th>Training school</th><td>28&ndash;30 September 2026</td></tr>
     </table>
 
-    <div class="panel">
-      <p>Applications are made through an online form.</p>
-      <p><a class="btn" href="[[GOOGLE FORM URL]]">Apply now</a></p>
-    </div>
+    <h3>How to register</h3>
+    <p>Registration is in two steps. Both are required.</p>
+    <ol class="steps">
+      <li>
+        <strong>Register with the INFOGUT COST Action</strong>
+        Join a working group of COST Action CA23110 at
+        <a href="https://e-services.cost.eu/action/CA23110/working-groups/apply">e-services.cost.eu</a>.
+        This is a prerequisite for attending.
+      </li>
+      <li>
+        <strong>Register for the training school</strong>
+        Complete the application form at
+        <a href="https://forms.gle/BC4d8h9RxaTqjtcz8">forms.gle/BC4d8h9RxaTqjtcz8</a>.
+      </li>
+    </ol>
 
-    <div class="todo">
-      <strong>To confirm:</strong> what applicants need to submit (CV, motivation statement, supervisor
-      support?) and the criteria used to select between applicants beyond ECR priority.
+    <div class="panel">
+      <p><a class="btn" href="https://forms.gle/BC4d8h9RxaTqjtcz8">Register for the training school</a></p>
     </div>
   </div>
 </section>
@@ -170,6 +191,14 @@
     </div>
     <div class="trainer">
       <strong>Laura Judith Marcos Zambrano</strong><br>
+      <span class="affil">IMDEA, Madrid, Spain</span>
+    </div>
+    <div class="trainer">
+      <strong>Adri&aacute;n Mart&iacute;n Segura</strong><br>
+      <span class="affil">IMDEA, Madrid, Spain</span>
+    </div>
+    <div class="trainer">
+      <strong>Alba P&eacute;rez Cuervo</strong><br>
       <span class="affil">IMDEA, Madrid, Spain</span>
     </div>
     <div class="trainer">
@@ -228,7 +257,7 @@
         <tr><td class="time">14:30 &ndash; 15:15</td><td>Hands-on R &mdash; data analysis: testing, multiple comparisons</td></tr>
         <tr><td class="time">15:15 &ndash; 16:00</td><td>Hands-on R &mdash; data analysis: using data objects</td></tr>
         <tr class="break"><td class="time">16:00 &ndash; 16:20</td><td>Coffee</td></tr>
-        <tr><td class="time">16:20 &ndash; 17:30</td><td>Data management and FAIR &mdash; project structure, metadata, repositories, plus short hands-on setup, then close</td></tr>
+        <tr><td class="time">16:20 &ndash; 17:30</td><td>GitHub</td></tr>
         <tr class="break"><td class="time">20:00</td><td>Dinner</td></tr>
       </tbody>
     </table>
@@ -237,10 +266,10 @@
     <table>
       <thead><tr><th>Time</th><th>Session</th></tr></thead>
       <tbody>
-        <tr><td class="time">09:30 &ndash; 11:00</td><td>GitHub</td></tr>
+        <tr><td class="time">09:30 &ndash; 11:00</td><td>Introduction to microbiome data for colon model experiments &mdash; 16S vs WGS, what the data looks like</td></tr>
         <tr class="break"><td class="time">11:00 &ndash; 11:20</td><td>Coffee</td></tr>
         <tr><td class="time">11:20 &ndash; 12:20</td><td>Environments and workflows &mdash; Conda, Nextflow</td></tr>
-        <tr><td class="time">12:20 &ndash; 13:00</td><td>Introduction to microbiome data for colon model experiments &mdash; 16S vs WGS, what the data looks like</td></tr>
+        <tr><td class="time">12:20 &ndash; 13:00</td><td>Data management and FAIR &mdash; project structure, metadata, repositories, plus short hands-on setup, then close</td></tr>
         <tr><td class="time">13:00 &ndash; 13:30</td><td>Wrap-up and farewell</td></tr>
       </tbody>
     </table>
