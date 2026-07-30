@@ -25,7 +25,11 @@
   :focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
 
   header { padding: 44px 0 34px; border-bottom: 3px solid var(--red); }
-  header img { max-width: 230px; height: auto; display: block; margin-bottom: 22px; }
+  .logos { display: flex; justify-content: space-between; align-items: flex-start;
+           gap: 24px; flex-wrap: wrap; margin-bottom: 26px; }
+  .logos img { height: auto; display: block; }
+  .logos .infogut { width: 220px; }
+  .logos .imdea { width: 165px; }
   h1 { font-size: 2.1rem; line-height: 1.15; margin: 0 0 10px; }
   h1 span { color: var(--red); }
   .meta { margin: 0; color: var(--muted); font-size: 1.05rem; }
@@ -67,19 +71,43 @@
   .facts { border-top: 2px solid var(--red); }
   .facts th { color: var(--red); font-size: 13px; text-transform: uppercase; letter-spacing: .05em; width: 190px; }
 
+  .people { display: flex; flex-wrap: wrap; gap: 30px; margin: 20px 0 6px; }
+  .person { display: flex; align-items: center; gap: 14px; }
+  .person img { width: 96px; height: 96px; object-fit: cover; border: 1px solid var(--line); }
+  .person .name { font-weight: 700; }
+  .doclink { display: inline-block; font-size: 14px; font-weight: 600; margin: 4px 0 0; }
+  .hotels td { font-size: 14px; }
+  .hotels .hname { font-weight: 700; }
+  .banner { margin: 24px 0 6px; }
+  .banner img { width: 100%; height: 210px; object-fit: cover;
+                object-position: center 62%; display: block; border: 1px solid var(--line); }
+  .split { display: flex; flex-wrap: wrap; gap: 28px; margin-top: 6px; }
+  .split-text { flex: 1 1 320px; min-width: 260px; }
+  .split-img { flex: 0 1 290px; }
+  .split-text h3:first-child { margin-top: 0; }
+  figure { margin: 22px 0; }
+  figure img { width: 100%; height: auto; display: block; border: 1px solid var(--line); }
+  figcaption { font-size: 13px; color: var(--muted); padding-top: 7px; }
   .trainer { padding: 14px 0; border-bottom: 1px solid var(--line); }
   .trainer:last-child { border-bottom: none; }
   .trainer .affil { color: var(--muted); font-size: 14px; }
 
   footer { padding: 30px 0 60px; color: var(--muted); font-size: 14px; }
-  @media (max-width: 560px) { h1 { font-size: 1.6rem; } td.time { width: auto; } }
+  @media (max-width: 560px) {
+    h1 { font-size: 1.6rem; }
+    td.time { width: auto; }
+    .banner img { height: 150px; }
+  }
 </style>
 </head>
 <body>
 
 <header>
   <div class="wrap">
-    <img src="infogut-logo.jpg" alt="INFOGUT">
+    <div class="logos">
+      <img class="infogut" src="infogut-logo.jpg" alt="INFOGUT">
+      <img class="imdea" src="imdea-logo.png" alt="IMDEA Nutrition">
+    </div>
     <h1>Third <span>INFOGUT</span> Training School</h1>
     <p class="meta"><strong>28&ndash;30 September 2026</strong> &middot; IMDEA Nutrition Institute, Madrid, Spain &middot; In person</p>
   </div>
@@ -90,7 +118,7 @@
     <ul>
       <li><a href="#overview">Overview</a></li>
       <li><a href="#apply">Eligibility &amp; registration</a></li>
-      <li><a href="#trainers">Trainers</a></li>
+      <li><a href="#trainers">Organisers &amp; trainers</a></li>
       <li><a href="#programme">Programme</a></li>
       <li><a href="#venue">Venue &amp; travel</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -155,8 +183,8 @@
     <h3>Key dates</h3>
     <table class="facts">
       <tr><th>Registration opens</th><td>Monday 3 August 2026</td></tr>
-      <tr><th>Registration closes</th><td>Tuesday 1 September 2026</td></tr>
-      <tr><th>Confirmations sent</th><td>Tuesday 8 September 2026</td></tr>
+      <tr><th>Registration closes</th><td>Friday 28 August 2026</td></tr>
+      <tr><th>Confirmations sent</th><td>Tuesday 1 September 2026</td></tr>
       <tr><th>Training school</th><td>28&ndash;30 September 2026</td></tr>
     </table>
 
@@ -182,12 +210,27 @@
 <!-- ================= TRAINERS ================= -->
 <section id="trainers">
   <div class="wrap">
-    <h2>Trainers</h2>
+    <h2>Organisers</h2>
 
-    <div class="trainer">
-      <strong>Enrique Carrillo</strong><br>
-      <span class="affil">Computational Biology Group, IMDEA Nutrition, Madrid, Spain</span>
+    <div class="people">
+      <div class="person">
+        <img src="organiser-enrique.jpg" alt="Enrique Carrillo de Santa Pau">
+        <div>
+          <span class="name">Enrique Carrillo de Santa Pau</span><br>
+          <span class="affil">Computational Biology Group,<br>IMDEA Nutrition, Madrid, Spain</span>
+        </div>
+      </div>
+      <div class="person">
+        <img src="organiser-alise.jpg" alt="Alise Ponsero">
+        <div>
+          <span class="name">Alise Ponsero</span><br>
+          <span class="affil">Quadram Institute Bioscience,<br>United Kingdom</span>
+        </div>
+      </div>
     </div>
+
+    <h2 style="margin-top:38px">Trainers</h2>
+
     <div class="trainer">
       <strong>Laura Judith Marcos Zambrano</strong><br>
       <span class="affil">Computational Biology Group, IMDEA Nutrition, Madrid, Spain</span>
@@ -203,10 +246,6 @@
     <div class="trainer">
       <strong>Andr&eacute;s M&eacute;ndez Hurtado</strong><br>
       <span class="affil">Computational Biology Group, IMDEA Nutrition, Madrid, Spain</span>
-    </div>
-    <div class="trainer">
-      <strong>Alise Ponsero</strong><br>
-      <span class="affil">Quadram Institute Bioscience, United Kingdom</span>
     </div>
     <div class="trainer">
       <strong>Eliana Ibrahimi</strong><br>
@@ -276,6 +315,9 @@
         <tr><td class="time">13:00 &ndash; 13:30</td><td>Wrap-up and farewell</td></tr>
       </tbody>
     </table>
+
+    <p class="affil">This programme is indicative. The exact schedule and session content may change
+       before the school begins.</p>
   </div>
 </section>
 
@@ -285,16 +327,82 @@
     <h2>Venue and travel</h2>
 
     <h3>Host institution</h3>
-    <p><a href="https://nutrition.imdea.org/">IMDEA Nutrition Institute</a><br>
-       Madrid, Spain</p>
+    <p><a href="https://nutrition.imdea.org/">IMDEA Nutrition</a> is a research centre working on
+       precision nutrition and its relationship to health across the lifespan. The groups most closely
+       aligned with INFOGUT sit at the intersection of systems biology, artificial intelligence and
+       nutrition science, studying how diet, microbiome, metabolism, lifestyle and ageing interact to
+       shape variability between individuals in cancer and other chronic diseases. The Computational
+       Biology Group hosts this training school.</p>
+    <p><a class="doclink" href="imdea-about-us.pdf">Read more about IMDEA Nutrition (PDF)</a></p>
 
-    <div class="todo">
-      <strong>To confirm:</strong> full street address and room, directions from the airport and from
-      central Madrid, local public transport, and site access requirements on arrival.
+    <figure class="banner">
+      <img src="computational-group.jpg" alt="Members of the Computational Biology Group at IMDEA Nutrition">
+      <figcaption>The Computational Biology Group at IMDEA Nutrition, who host the school.</figcaption>
+    </figure>
+
+    <h3>Where we are</h3>
+    <div class="split">
+      <div class="split-text">
+        <p>IMDEA Nutrition<br>
+           Carretera de Canto Blanco, 8<br>
+           28049 Madrid, Spain</p>
+        <p>The institute sits on the Cantoblanco campus of the Universidad Aut&oacute;noma de Madrid,
+           roughly 15 km north of central Madrid, in a quiet academic setting with modern meeting spaces.</p>
+
+        <h3>Getting there</h3>
+        <ul>
+          <li><strong>By air:</strong> around 20 minutes from Adolfo Su&aacute;rez Madrid&ndash;Barajas Airport.</li>
+          <li><strong>By public transport:</strong> reachable by Cercan&iacute;as commuter train, bus and taxi.</li>
+          <li><strong>By car:</strong> free on-site parking is available for participants.</li>
+        </ul>
+      </div>
+      <div class="split-img">
+        <figure style="margin:0">
+          <img src="venue.jpg" alt="The IMDEA Nutrition building in Madrid">
+          <figcaption>IMDEA Nutrition, Madrid.</figcaption>
+        </figure>
+      </div>
     </div>
 
     <h3>Accommodation</h3>
-    <p>Accommodation details will be published here closer to the event.</p>
+    <p>Participants book their own accommodation. The organisers suggest the hotels below, all in
+       northern or eastern Madrid with reasonable connections to the venue. Journey times are to
+       IMDEA Nutrition.</p>
+
+    <table class="hotels">
+      <thead>
+        <tr><th>Hotel</th><th>Location</th><th>To the venue</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="hname"><a href="https://www.miradordechamartin.com/en/">Mirador de Chamart&iacute;n</a></span><br>4 star</td>
+          <td>Calle del Arte 14, Ciudad Lineal, 28033<br>5 minute walk to Pinar de Chamart&iacute;n metro; 11 km from the airport</td>
+          <td>20 min by car<br>45 min by bus and train</td>
+        </tr>
+        <tr>
+          <td><span class="hname"><a href="https://www.melia.com/es/hoteles/espana/madrid/hotel-madrid-chamartin-by-melia">Madrid Chamart&iacute;n, Affiliated by Meli&aacute;</a></span></td>
+          <td>Calle de Mauricio Ravel 10, Chamart&iacute;n, 28046<br>3 minute walk to Chamart&iacute;n station; 13 km from the airport</td>
+          <td>20 min by car<br>25 min by train</td>
+        </tr>
+        <tr>
+          <td><span class="hname"><a href="https://www.hoteldonpio.com/en/">Don P&iacute;o</a></span><br>4 star</td>
+          <td>Avenida P&iacute;o XII 25, 28016</td>
+          <td>20 min by car<br>35 min by metro and bus</td>
+        </tr>
+        <tr>
+          <td><span class="hname"><a href="https://short-url.cc/1A12v">Ibis Madrid Centro Las Ventas</a></span></td>
+          <td>Calle Julio Camba 1, corner of Calle Alcal&aacute; 233, 28028<br>Next to the Las Ventas bullring</td>
+          <td>25 min by car<br>55 min by metro and train</td>
+        </tr>
+        <tr>
+          <td><span class="hname"><a href="https://all.accor.com/hotel/3312/index.es.shtml">Ibis Madrid Calle Alcal&aacute;</a></span></td>
+          <td>Calle Valent&iacute;n Beato 20, 28037<br>8 km from the airport</td>
+          <td>20 min by car<br>Not practical by public transport, around 1 hour</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><a class="doclink" href="madrid-hotels.pdf">Full hotel recommendations, with photographs and route maps (PDF)</a></p>
   </div>
 </section>
 
