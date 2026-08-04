@@ -88,9 +88,16 @@
   figure { margin: 22px 0; }
   figure img { width: 100%; height: auto; display: block; border: 1px solid var(--line); }
   figcaption { font-size: 13px; color: var(--muted); padding-top: 7px; }
-  .trainer { padding: 14px 0; border-bottom: 1px solid var(--line); }
-  .trainer:last-child { border-bottom: none; }
+  .trainer-grid { display: grid; gap: 22px 26px; margin: 20px 0 6px;
+                  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); }
+  .trainer { display: flex; align-items: center; gap: 14px; }
   .trainer .affil { color: var(--muted); font-size: 14px; }
+  .avatar { width: 76px; height: 76px; flex: 0 0 76px; object-fit: cover;
+            border: 1px solid var(--line); }
+  .avatar-blank { width: 76px; height: 76px; flex: 0 0 76px; border: 1px solid var(--line);
+                  background: var(--panel); color: var(--red); font-weight: 700;
+                  font-size: 20px; letter-spacing: .04em;
+                  display: flex; align-items: center; justify-content: center; }
 
   footer { padding: 30px 0 60px; color: var(--muted); font-size: 14px; }
   @media (max-width: 560px) {
@@ -131,9 +138,23 @@
 <section id="overview">
   <div class="wrap">
     <h2 class="red">Bioinformatics 101 for colon model experiments</h2>
-    <p>A three-day, hands-on introduction to the computational skills needed to analyse data from
-       colon model experiments. The school is designed for complete beginners: no prior bioinformatics
-       experience is required.</p>
+    <p>Advances in in vitro gut models, high-throughput sequencing and metabolomics are transforming
+       our understanding of host-microbiome interactions. These technologies generate increasingly
+       complex datasets, creating a growing need for researchers to develop computational skills that
+       enable robust, reproducible and biologically meaningful data analysis.</p>
+
+    <p>The Third INFOGUT Training School 2026, organised within the COST Action INFOGUT and the IMDEA
+       Nutrition Institute (Spain), is an intensive three-day programme designed to equip researchers
+       with the fundamental bioinformatics skills required to analyse microbiome and metabolomics data
+       derived from in vitro colon models.</p>
+
+    <p>Designed for PhD candidates, postdoctoral researchers and technical staff, the course combines
+       theory with hands-on training in R, Unix/Bash, GitHub, statistical analysis, FAIR data principles
+       and reproducible bioinformatics workflows. <span class="no">No prior programming experience is
+       required.</span></p>
+
+    <p>Beyond technical training, participants will engage with leading international experts, exchange
+       knowledge and establish collaborations within the European INFOGUT research network.</p>
 
     <h3>What the course covers</h3>
     <ul>
@@ -150,7 +171,7 @@
        open to all, and technical personnel are particularly welcome. It focuses on people who are
        already working with in-vitro colon models, or who are planning to.</p>
     <ul>
-      <li><span class="no">No prior experience is needed.</span> The course starts from the very beginning.</li>
+      <li>The course starts from the very beginning, with no assumed background.</li>
       <li>If the command line and coding make you nervous, this school is designed for you. Participants
           who feel apprehensive about code are especially encouraged to apply.</li>
       <li>30 places available.</li>
@@ -279,33 +300,63 @@
 
     <h2 style="margin-top:38px">Trainers</h2>
 
-    <div class="trainer">
-      <strong>Laura Judith Marcos Zambrano</strong><br>
-      <span class="affil">Computational Biology Group, IMDEA Nutrition, Madrid, Spain</span>
-    </div>
-    <div class="trainer">
-      <strong>Adri&aacute;n Mart&iacute;n Segura</strong><br>
-      <span class="affil">Computational Biology Group, IMDEA Nutrition, Madrid, Spain</span>
-    </div>
-    <div class="trainer">
-      <strong>Alba P&eacute;rez Cuervo</strong><br>
-      <span class="affil">Computational Biology Group, IMDEA Nutrition, Madrid, Spain</span>
-    </div>
-    <div class="trainer">
-      <strong>Andr&eacute;s M&eacute;ndez Hurtado</strong><br>
-      <span class="affil">Computational Biology Group, IMDEA Nutrition, Madrid, Spain</span>
-    </div>
-    <div class="trainer">
-      <strong>Eliana Ibrahimi</strong><br>
-      <span class="affil">University of Tirana, Albania</span>
-    </div>
-    <div class="trainer">
-      <strong>Anna Mascellani Bergo</strong><br>
-      <span class="affil">Czech University of Life Sciences, Czech Republic</span>
-    </div>
-    <div class="trainer">
-      <strong>Petra Polakovi&ccaron;ov&aacute;</strong><br>
-      <span class="affil">Institute for Clinical and Experimental Medicine, Czech Republic</span>
+    <div class="trainer-grid">
+      <div class="trainer">
+        <img class="avatar" src="trainer-laura.jpg" alt="Laura Judith Marcos Zambrano">
+        <div>
+          <strong>Laura Judith Marcos Zambrano</strong><br>
+          <span class="affil">Computational Biology Group, IMDEA Nutrition, Madrid, Spain</span>
+        </div>
+      </div>
+      <div class="trainer">
+        <img class="avatar" src="trainer-adrian.jpg" alt="Adri&aacute;n Mart&iacute;n Segura">
+        <div>
+          <strong>Adri&aacute;n Mart&iacute;n Segura</strong><br>
+          <span class="affil">Computational Biology Group, IMDEA Nutrition, Madrid, Spain</span>
+        </div>
+      </div>
+      <div class="trainer">
+        <div class="avatar-blank" aria-hidden="true">AP</div>
+        <div>
+          <strong>Alba P&eacute;rez Cuervo</strong><br>
+          <span class="affil">Computational Biology Group, IMDEA Nutrition, Madrid, Spain</span>
+        </div>
+      </div>
+      <div class="trainer">
+        <div class="avatar-blank" aria-hidden="true">AM</div>
+        <div>
+          <strong>Andr&eacute;s M&eacute;ndez Hurtado</strong><br>
+          <span class="affil">Computational Biology Group, IMDEA Nutrition, Madrid, Spain</span>
+        </div>
+      </div>
+      <div class="trainer">
+        <div class="avatar-blank" aria-hidden="true">EI</div>
+        <div>
+          <strong>Eliana Ibrahimi</strong><br>
+          <span class="affil">University of Tirana, Albania</span>
+        </div>
+      </div>
+      <div class="trainer">
+        <div class="avatar-blank" aria-hidden="true">AB</div>
+        <div>
+          <strong>Anna Mascellani Bergo</strong><br>
+          <span class="affil">Czech University of Life Sciences, Czech Republic</span>
+        </div>
+      </div>
+      <div class="trainer">
+        <img class="avatar" src="trainer-petra.jpg" alt="Petra Polakovi&ccaron;ov&aacute;">
+        <div>
+          <strong>Petra Polakovi&ccaron;ov&aacute;</strong><br>
+          <span class="affil">Institute for Clinical and Experimental Medicine, Czech Republic</span>
+        </div>
+      </div>
+      <div class="trainer">
+        <div class="avatar-blank" aria-hidden="true">MR</div>
+        <div>
+          <strong>Matti Ruuskanen</strong><br>
+          <span class="affil">Department of Life Technologies, University of Turku, Finland</span>
+        </div>
+      </div>
     </div>
 
     <p class="affil" style="margin-top:18px">Further trainers and session assignments to be announced.</p>
@@ -451,6 +502,11 @@
     </table>
 
     <p><a class="doclink" href="madrid-hotels.pdf">Full hotel recommendations, with photographs and route maps (PDF)</a></p>
+
+    <h3>Transfers</h3>
+    <p>Transfers between these hotels and the IMDEA Nutrition Institute, including return transfers,
+       will be arranged by the organisers. Timetables and further information will be provided once
+       your acceptance has been confirmed.</p>
   </div>
 </section>
 
